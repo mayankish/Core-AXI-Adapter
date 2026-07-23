@@ -1,4 +1,4 @@
-# core_axi_adapter
+# AXi-Adapter
 
 A single-outstanding-transaction AXI4-Lite master that converts a simple
 request/ready handshake — one address, one write-enable bit, read and
