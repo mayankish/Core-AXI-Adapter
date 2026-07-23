@@ -1,0 +1,2238 @@
+{
+  "creator": "Yosys 0.67 (git sha1 2d1509d1b, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+  "modules": {
+    "core_axi_adapter": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "core_axi_adapter/rtl/core_axi_adapter.v:31.1-177.10"
+      },
+      "parameter_default_values": {
+        "AW": "00000000000000000000000000010000",
+        "DW": "00000000000000000000000000100000"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst_n": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "dmem_req": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "dmem_we": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "dmem_ready": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "m_awvalid": {
+          "direction": "output",
+          "bits": [ 7 ]
+        },
+        "m_awready": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "m_wvalid": {
+          "direction": "output",
+          "bits": [ 9 ]
+        },
+        "m_wready": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "m_bvalid": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "m_bready": {
+          "direction": "output",
+          "bits": [ 12 ]
+        },
+        "m_arvalid": {
+          "direction": "output",
+          "bits": [ 13 ]
+        },
+        "m_arready": {
+          "direction": "input",
+          "bits": [ 14 ]
+        },
+        "m_rvalid": {
+          "direction": "input",
+          "bits": [ 15 ]
+        },
+        "m_rready": {
+          "direction": "output",
+          "bits": [ 16 ]
+        }
+      },
+      "cells": {
+        "$eq$core_axi_adapter/rtl/core_axi_adapter.v:175$16": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:175.22-175.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 6 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:103$5": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:103.30-103.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 20 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:111$6": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:111.21-111.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 8 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:115$7": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:115.21-115.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 10 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:120$12": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:120.21-121.57"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 25 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:120$8": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:120.34-120.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 8 ],
+            "Y": [ 27 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:121$10": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:121.34-121.55"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 10 ],
+            "Y": [ 28 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:128$13": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:128.21-128.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 12 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:137$14": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:137.21-137.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 14 ],
+            "Y": [ 30 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:145$15": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:145.21-145.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 16 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:94$3": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:94.21-94.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$logic_not$core_axi_adapter/rtl/core_axi_adapter.v:103$4": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:103.42-103.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$logic_or$core_axi_adapter/rtl/core_axi_adapter.v:120$9": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:120.22-120.57"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "B": [ 27 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$logic_or$core_axi_adapter/rtl/core_axi_adapter.v:121$11": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:121.22-121.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 28 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$procdff$189": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 35 ],
+            "Q": [ 7 ]
+          }
+        },
+        "$procdff$204": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 36 ],
+            "Q": [ 9 ]
+          }
+        },
+        "$procdff$209": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 37 ],
+            "Q": [ 12 ]
+          }
+        },
+        "$procdff$219": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 38 ],
+            "Q": [ 13 ]
+          }
+        },
+        "$procdff$224": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 39 ],
+            "Q": [ 16 ]
+          }
+        },
+        "$procdff$229": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 40, 41, 42 ],
+            "Q": [ 17, 18, 19 ]
+          }
+        },
+        "$procdff$234": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 43 ],
+            "Q": [ 33 ]
+          }
+        },
+        "$procdff$239": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 44 ],
+            "Q": [ 34 ]
+          }
+        },
+        "$procmux$103": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:128.21-128.41|core_axi_adapter/rtl/core_axi_adapter.v:128.17-133.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ "0" ],
+            "S": [ 29 ],
+            "Y": [ 45 ]
+          }
+        },
+        "$procmux$105": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:125.16-125.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 45, 46 ],
+            "S": [ 47, 48 ],
+            "Y": [ 37 ]
+          }
+        },
+        "$procmux$106_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:125.16-125.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 47 ]
+          }
+        },
+        "$procmux$107": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:120.21-121.57|core_axi_adapter/rtl/core_axi_adapter.v:120.17-124.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ "1" ],
+            "S": [ 26 ],
+            "Y": [ 46 ]
+          }
+        },
+        "$procmux$109_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 48 ]
+          }
+        },
+        "$procmux$115": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:115.21-115.41|core_axi_adapter/rtl/core_axi_adapter.v:115.17-118.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ "0" ],
+            "S": [ 23 ],
+            "Y": [ 49 ]
+          }
+        },
+        "$procmux$117": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 49, 50 ],
+            "S": [ 51, 52 ],
+            "Y": [ 36 ]
+          }
+        },
+        "$procmux$118_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 51 ]
+          }
+        },
+        "$procmux$120": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:94.21-94.40|core_axi_adapter/rtl/core_axi_adapter.v:94.17-107.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ "1" ],
+            "S": [ 32 ],
+            "Y": [ 50 ]
+          }
+        },
+        "$procmux$122_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:92.21-92.21|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "Y": [ 52 ]
+          }
+        },
+        "$procmux$150": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:111.21-111.43|core_axi_adapter/rtl/core_axi_adapter.v:111.17-114.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ "0" ],
+            "S": [ 22 ],
+            "Y": [ 53 ]
+          }
+        },
+        "$procmux$152": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 53, 54 ],
+            "S": [ 55, 56 ],
+            "Y": [ 35 ]
+          }
+        },
+        "$procmux$153_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 55 ]
+          }
+        },
+        "$procmux$155": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:94.21-94.40|core_axi_adapter/rtl/core_axi_adapter.v:94.17-107.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ "1" ],
+            "S": [ 32 ],
+            "Y": [ 54 ]
+          }
+        },
+        "$procmux$157_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:92.21-92.21|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "Y": [ 56 ]
+          }
+        },
+        "$procmux$22": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:115.21-115.41|core_axi_adapter/rtl/core_axi_adapter.v:115.17-118.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ "1" ],
+            "S": [ 23 ],
+            "Y": [ 57 ]
+          }
+        },
+        "$procmux$24": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 57, 58 ],
+            "S": [ 59, 60 ],
+            "Y": [ 44 ]
+          }
+        },
+        "$procmux$25_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 59 ]
+          }
+        },
+        "$procmux$27": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:94.21-94.40|core_axi_adapter/rtl/core_axi_adapter.v:94.17-107.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ "0" ],
+            "S": [ 32 ],
+            "Y": [ 58 ]
+          }
+        },
+        "$procmux$29_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:92.21-92.21|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "Y": [ 60 ]
+          }
+        },
+        "$procmux$35": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:111.21-111.43|core_axi_adapter/rtl/core_axi_adapter.v:111.17-114.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "B": [ "1" ],
+            "S": [ 22 ],
+            "Y": [ 61 ]
+          }
+        },
+        "$procmux$37": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "B": [ 61, 62 ],
+            "S": [ 63, 64 ],
+            "Y": [ 43 ]
+          }
+        },
+        "$procmux$38_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 63 ]
+          }
+        },
+        "$procmux$40": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:94.21-94.40|core_axi_adapter/rtl/core_axi_adapter.v:94.17-107.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "B": [ "0" ],
+            "S": [ 32 ],
+            "Y": [ 62 ]
+          }
+        },
+        "$procmux$42_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:92.21-92.21|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "Y": [ 64 ]
+          }
+        },
+        "$procmux$45": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:145.21-145.41|core_axi_adapter/rtl/core_axi_adapter.v:145.17-149.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "0", "1" ],
+            "S": [ 31 ],
+            "Y": [ 65, 66, 67 ]
+          }
+        },
+        "$procmux$47": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000101",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:142.16-142.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0" ],
+            "B": [ 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79 ],
+            "S": [ 80, 81, 82, 83, 84 ],
+            "Y": [ 40, 41, 42 ]
+          }
+        },
+        "$procmux$48_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:142.16-142.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 80 ]
+          }
+        },
+        "$procmux$49": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:137.21-137.43|core_axi_adapter/rtl/core_axi_adapter.v:137.17-141.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "0", "0", "1" ],
+            "S": [ 30 ],
+            "Y": [ 68, 69, 70 ]
+          }
+        },
+        "$procmux$51_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:134.16-134.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 81 ]
+          }
+        },
+        "$procmux$52": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:128.21-128.41|core_axi_adapter/rtl/core_axi_adapter.v:128.17-133.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "0", "1" ],
+            "S": [ 29 ],
+            "Y": [ 71, 72, 73 ]
+          }
+        },
+        "$procmux$54_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:125.16-125.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 82 ]
+          }
+        },
+        "$procmux$55": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:120.21-121.57|core_axi_adapter/rtl/core_axi_adapter.v:120.17-124.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "0", "1", "0" ],
+            "S": [ 26 ],
+            "Y": [ 74, 75, 76 ]
+          }
+        },
+        "$procmux$57_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:108.16-108.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 83 ]
+          }
+        },
+        "$procmux$58": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:103.30-103.50|core_axi_adapter/rtl/core_axi_adapter.v:103.26-107.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "1", "0" ],
+            "S": [ 21 ],
+            "Y": [ 85, 86, 87 ]
+          }
+        },
+        "$procmux$61": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:94.21-94.40|core_axi_adapter/rtl/core_axi_adapter.v:94.17-107.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 85, 86, 87 ],
+            "B": [ "1", "0", "0" ],
+            "S": [ 32 ],
+            "Y": [ 77, 78, 79 ]
+          }
+        },
+        "$procmux$63_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:92.21-92.21|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "Y": [ 84 ]
+          }
+        },
+        "$procmux$66": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:145.21-145.41|core_axi_adapter/rtl/core_axi_adapter.v:145.17-149.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ "0" ],
+            "S": [ 31 ],
+            "Y": [ 88 ]
+          }
+        },
+        "$procmux$68": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:142.16-142.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 88, 89 ],
+            "S": [ 90, 91 ],
+            "Y": [ 39 ]
+          }
+        },
+        "$procmux$69_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:142.16-142.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 90 ]
+          }
+        },
+        "$procmux$70": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:137.21-137.43|core_axi_adapter/rtl/core_axi_adapter.v:137.17-141.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ "1" ],
+            "S": [ 30 ],
+            "Y": [ 89 ]
+          }
+        },
+        "$procmux$72_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:134.16-134.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 91 ]
+          }
+        },
+        "$procmux$76": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:137.21-137.43|core_axi_adapter/rtl/core_axi_adapter.v:137.17-141.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ "0" ],
+            "S": [ 30 ],
+            "Y": [ 92 ]
+          }
+        },
+        "$procmux$78": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:134.16-134.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 92, 93 ],
+            "S": [ 94, 95 ],
+            "Y": [ 38 ]
+          }
+        },
+        "$procmux$79_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:134.16-134.16|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 94 ]
+          }
+        },
+        "$procmux$80": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:103.30-103.50|core_axi_adapter/rtl/core_axi_adapter.v:103.26-107.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ "1" ],
+            "S": [ 21 ],
+            "Y": [ 96 ]
+          }
+        },
+        "$procmux$83": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:94.21-94.40|core_axi_adapter/rtl/core_axi_adapter.v:94.17-107.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 96 ],
+            "B": [ 13 ],
+            "S": [ 32 ],
+            "Y": [ 93 ]
+          }
+        },
+        "$procmux$85_CMP0": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:92.21-92.21|core_axi_adapter/rtl/core_axi_adapter.v:92.9-157.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17, 18, 19 ],
+            "Y": [ 95 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\aw_done[0:0]": {
+          "hide_name": 1,
+          "bits": [ 43 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          }
+        },
+        "$0\\m_arvalid[0:0]": {
+          "hide_name": 1,
+          "bits": [ 38 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          }
+        },
+        "$0\\m_awvalid[0:0]": {
+          "hide_name": 1,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          }
+        },
+        "$0\\m_bready[0:0]": {
+          "hide_name": 1,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          }
+        },
+        "$0\\m_rready[0:0]": {
+          "hide_name": 1,
+          "bits": [ 39 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          }
+        },
+        "$0\\m_wvalid[0:0]": {
+          "hide_name": 1,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          }
+        },
+        "$0\\state[2:0]": {
+          "hide_name": 1,
+          "bits": [ 40, 41, 42 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          }
+        },
+        "$0\\w_done[0:0]": {
+          "hide_name": 1,
+          "bits": [ 44 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:76.1-159.4"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:103$5_Y": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:103.30-103.50"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:111$6_Y": {
+          "hide_name": 1,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:111.21-111.43"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:115$7_Y": {
+          "hide_name": 1,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:115.21-115.41"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:120$12_Y": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:120.21-121.57"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:120$8_Y": {
+          "hide_name": 1,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:120.34-120.56"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:121$10_Y": {
+          "hide_name": 1,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:121.34-121.55"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:128$13_Y": {
+          "hide_name": 1,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:128.21-128.41"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:137$14_Y": {
+          "hide_name": 1,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:137.21-137.43"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:145$15_Y": {
+          "hide_name": 1,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:145.21-145.41"
+          }
+        },
+        "$logic_and$core_axi_adapter/rtl/core_axi_adapter.v:94$3_Y": {
+          "hide_name": 1,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:94.21-94.40"
+          }
+        },
+        "$logic_not$core_axi_adapter/rtl/core_axi_adapter.v:103$4_Y": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:103.42-103.50"
+          }
+        },
+        "$logic_or$core_axi_adapter/rtl/core_axi_adapter.v:120$9_Y": {
+          "hide_name": 1,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:120.22-120.57"
+          }
+        },
+        "$logic_or$core_axi_adapter/rtl/core_axi_adapter.v:121$11_Y": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:121.22-121.56"
+          }
+        },
+        "$procmux$103_Y": {
+          "hide_name": 1,
+          "bits": [ 45 ],
+          "attributes": {
+          }
+        },
+        "$procmux$106_CMP": {
+          "hide_name": 1,
+          "bits": [ 47 ],
+          "attributes": {
+          }
+        },
+        "$procmux$107_Y": {
+          "hide_name": 1,
+          "bits": [ 46 ],
+          "attributes": {
+          }
+        },
+        "$procmux$109_CMP": {
+          "hide_name": 1,
+          "bits": [ 48 ],
+          "attributes": {
+          }
+        },
+        "$procmux$115_Y": {
+          "hide_name": 1,
+          "bits": [ 49 ],
+          "attributes": {
+          }
+        },
+        "$procmux$118_CMP": {
+          "hide_name": 1,
+          "bits": [ 51 ],
+          "attributes": {
+          }
+        },
+        "$procmux$120_Y": {
+          "hide_name": 1,
+          "bits": [ 50 ],
+          "attributes": {
+          }
+        },
+        "$procmux$122_CMP": {
+          "hide_name": 1,
+          "bits": [ 52 ],
+          "attributes": {
+          }
+        },
+        "$procmux$150_Y": {
+          "hide_name": 1,
+          "bits": [ 53 ],
+          "attributes": {
+          }
+        },
+        "$procmux$153_CMP": {
+          "hide_name": 1,
+          "bits": [ 55 ],
+          "attributes": {
+          }
+        },
+        "$procmux$155_Y": {
+          "hide_name": 1,
+          "bits": [ 54 ],
+          "attributes": {
+          }
+        },
+        "$procmux$157_CMP": {
+          "hide_name": 1,
+          "bits": [ 56 ],
+          "attributes": {
+          }
+        },
+        "$procmux$22_Y": {
+          "hide_name": 1,
+          "bits": [ 57 ],
+          "attributes": {
+          }
+        },
+        "$procmux$25_CMP": {
+          "hide_name": 1,
+          "bits": [ 59 ],
+          "attributes": {
+          }
+        },
+        "$procmux$27_Y": {
+          "hide_name": 1,
+          "bits": [ 58 ],
+          "attributes": {
+          }
+        },
+        "$procmux$29_CMP": {
+          "hide_name": 1,
+          "bits": [ 60 ],
+          "attributes": {
+          }
+        },
+        "$procmux$35_Y": {
+          "hide_name": 1,
+          "bits": [ 61 ],
+          "attributes": {
+          }
+        },
+        "$procmux$38_CMP": {
+          "hide_name": 1,
+          "bits": [ 63 ],
+          "attributes": {
+          }
+        },
+        "$procmux$40_Y": {
+          "hide_name": 1,
+          "bits": [ 62 ],
+          "attributes": {
+          }
+        },
+        "$procmux$42_CMP": {
+          "hide_name": 1,
+          "bits": [ 64 ],
+          "attributes": {
+          }
+        },
+        "$procmux$45_Y": {
+          "hide_name": 1,
+          "bits": [ 65, 66, 67 ],
+          "attributes": {
+          }
+        },
+        "$procmux$48_CMP": {
+          "hide_name": 1,
+          "bits": [ 80 ],
+          "attributes": {
+          }
+        },
+        "$procmux$49_Y": {
+          "hide_name": 1,
+          "bits": [ 68, 69, 70 ],
+          "attributes": {
+          }
+        },
+        "$procmux$51_CMP": {
+          "hide_name": 1,
+          "bits": [ 81 ],
+          "attributes": {
+          }
+        },
+        "$procmux$52_Y": {
+          "hide_name": 1,
+          "bits": [ 71, 72, 73 ],
+          "attributes": {
+          }
+        },
+        "$procmux$54_CMP": {
+          "hide_name": 1,
+          "bits": [ 82 ],
+          "attributes": {
+          }
+        },
+        "$procmux$55_Y": {
+          "hide_name": 1,
+          "bits": [ 74, 75, 76 ],
+          "attributes": {
+          }
+        },
+        "$procmux$57_CMP": {
+          "hide_name": 1,
+          "bits": [ 83 ],
+          "attributes": {
+          }
+        },
+        "$procmux$58_Y": {
+          "hide_name": 1,
+          "bits": [ 85, 86, 87 ],
+          "attributes": {
+          }
+        },
+        "$procmux$61_Y": {
+          "hide_name": 1,
+          "bits": [ 77, 78, 79 ],
+          "attributes": {
+          }
+        },
+        "$procmux$63_CMP": {
+          "hide_name": 1,
+          "bits": [ 84 ],
+          "attributes": {
+          }
+        },
+        "$procmux$66_Y": {
+          "hide_name": 1,
+          "bits": [ 88 ],
+          "attributes": {
+          }
+        },
+        "$procmux$69_CMP": {
+          "hide_name": 1,
+          "bits": [ 90 ],
+          "attributes": {
+          }
+        },
+        "$procmux$70_Y": {
+          "hide_name": 1,
+          "bits": [ 89 ],
+          "attributes": {
+          }
+        },
+        "$procmux$72_CMP": {
+          "hide_name": 1,
+          "bits": [ 91 ],
+          "attributes": {
+          }
+        },
+        "$procmux$76_Y": {
+          "hide_name": 1,
+          "bits": [ 92 ],
+          "attributes": {
+          }
+        },
+        "$procmux$79_CMP": {
+          "hide_name": 1,
+          "bits": [ 94 ],
+          "attributes": {
+          }
+        },
+        "$procmux$80_Y": {
+          "hide_name": 1,
+          "bits": [ 96 ],
+          "attributes": {
+          }
+        },
+        "$procmux$83_Y": {
+          "hide_name": 1,
+          "bits": [ 93 ],
+          "attributes": {
+          }
+        },
+        "$procmux$85_CMP": {
+          "hide_name": 1,
+          "bits": [ 95 ],
+          "attributes": {
+          }
+        },
+        "aw_done": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:74.11-74.18"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:35.28-35.31"
+          }
+        },
+        "dmem_ready": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:44.29-44.39"
+          }
+        },
+        "dmem_req": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:40.28-40.36"
+          }
+        },
+        "dmem_we": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:41.28-41.35"
+          }
+        },
+        "m_arready": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:59.29-59.38"
+          }
+        },
+        "m_arvalid": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:58.29-58.38"
+          }
+        },
+        "m_awready": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:49.29-49.38"
+          }
+        },
+        "m_awvalid": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:48.29-48.38"
+          }
+        },
+        "m_bready": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:56.29-56.37"
+          }
+        },
+        "m_bvalid": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:55.29-55.37"
+          }
+        },
+        "m_rready": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:63.29-63.37"
+          }
+        },
+        "m_rvalid": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:62.29-62.37"
+          }
+        },
+        "m_wready": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:53.29-53.37"
+          }
+        },
+        "m_wvalid": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:52.29-52.37"
+          }
+        },
+        "rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:36.28-36.33"
+          }
+        },
+        "state": {
+          "hide_name": 0,
+          "bits": [ 17, 18, 19 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:73.11-73.16"
+          }
+        },
+        "w_done": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "core_axi_adapter/rtl/core_axi_adapter.v:74.20-74.26"
+          }
+        }
+      }
+    }
+  }
+}
